@@ -40,7 +40,13 @@ struct HeaderTools {
     } // Return our saved frameworks. Defaults to the only saved set ~ iOS 14
     
     func retrieveHeaders(for framework: String, in iOSVersion: String = "14.0", isPrivate: Bool) -> [String] {
-        let path = Bundle.main.bundlePath + "/runheads/\(isPrivate ? "PrivateFrameworks" : "Frameworks")/\(framework).framework"
+        print("Retrieving headers from: \(framework)")
+        var path = Bundle.main.bundlePath
+        #if os(macOS)
+        path += "/Contents/Resources"
+        #endif
+        path += "/runheads/\(isPrivate ? "PrivateFrameworks" : "Frameworks")/\(framework)"
+        print("Path to retrieve them: \(path)")
         var docsArray: [String] = []
         do {
             docsArray = try FileManager.default.contentsOfDirectory(atPath: path)
@@ -52,14 +58,18 @@ struct HeaderTools {
     
     func retrieveHeaderContents(_ header: String, for framework: String, in iOSVersion: String = "14.0", isPrivate: Bool) -> [String] {
         var returnable = ""
-        let path = Bundle.main.bundlePath + "/runheads/\(isPrivate ? "PrivateFrameworks" : "Frameworks")/\(framework).framework/\(header).txt"
+        var path = Bundle.main.bundlePath
+        #if os(macOS)
+        path += "/Contents/Resources"
+        #endif
+        path += "/runheads/\(isPrivate ? "PrivateFrameworks" : "Frameworks")/\(framework)/\(header).txt"
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             returnable = String(data: data, encoding: .utf8) ?? "Couldn't convert header contents to String"
         } catch {
             print("Couldn't find the header file!")
         }
-        return returnable.components(separatedBy: "\n").filter { $0.first != "*" || $0.first != "/" || $0.isEmpty == false }
+        return returnable.components(separatedBy: "\n")
     } // Return the contents of the header in an array by line
     
 }

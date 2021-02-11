@@ -18,13 +18,21 @@ struct HHNavLink<Content: View>: View {
     }
     
     var body: some View {
+        #if os(macOS)
         NavigationLink(destination: self.content) {
             Text(self.name)
                 .foregroundColor(.blue)
                 .font(.subheadline)
-                .padding(.leading, 8)
+                .padding(.vertical, 4)
+        }.buttonStyle(LinkButtonStyle())
+        #else
+        NavigationLink(destination: self.content) {
+            Text(self.name)
+                .foregroundColor(.blue)
+                .font(.subheadline)
                 .padding(.vertical, 4)
         }
+        #endif
 //        Text("Does this work?")
     }
 }

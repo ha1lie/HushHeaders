@@ -11,10 +11,10 @@
 		2600686825D38848003EC0D6 /* AppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600686725D38848003EC0D6 /* AppTools.swift */; };
 		2600686B25D3884D003EC0D6 /* HeaderTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600686125D38835003EC0D6 /* HeaderTools.swift */; };
 		2600686E25D38853003EC0D6 /* AppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600686725D38848003EC0D6 /* AppTools.swift */; };
-		2600687B25D389D5003EC0D6 /* runheads in Resources */ = {isa = PBXBuildFile; fileRef = 2600687A25D389CD003EC0D6 /* runheads */; };
-		2600687C25D389D5003EC0D6 /* runheads in Resources */ = {isa = PBXBuildFile; fileRef = 2600687A25D389CD003EC0D6 /* runheads */; };
 		2600688025D38A2A003EC0D6 /* FrameworkNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 2600687F25D38A2A003EC0D6 /* FrameworkNames.json */; };
 		2600688125D38A2A003EC0D6 /* FrameworkNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 2600687F25D38A2A003EC0D6 /* FrameworkNames.json */; };
+		2601566525D45511004C5CAE /* runheads in Resources */ = {isa = PBXBuildFile; fileRef = 2601566425D45511004C5CAE /* runheads */; };
+		2601566625D45511004C5CAE /* runheads in Resources */ = {isa = PBXBuildFile; fileRef = 2601566425D45511004C5CAE /* runheads */; };
 		260B87E025D1CA4B00D295B6 /* HushHeadersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B87CD25D1CA4800D295B6 /* HushHeadersApp.swift */; };
 		260B87E125D1CA4B00D295B6 /* HushHeadersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B87CD25D1CA4800D295B6 /* HushHeadersApp.swift */; };
 		260B87E425D1CA4B00D295B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260B87CF25D1CA4A00D295B6 /* Assets.xcassets */; };
@@ -32,8 +32,8 @@
 /* Begin PBXFileReference section */
 		2600686125D38835003EC0D6 /* HeaderTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTools.swift; sourceTree = "<group>"; };
 		2600686725D38848003EC0D6 /* AppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTools.swift; sourceTree = "<group>"; };
-		2600687A25D389CD003EC0D6 /* runheads */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = runheads; path = "Shared/New Group/runheads"; sourceTree = SOURCE_ROOT; };
 		2600687F25D38A2A003EC0D6 /* FrameworkNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FrameworkNames.json; path = "Shared/New Group/FrameworkNames.json"; sourceTree = SOURCE_ROOT; };
+		2601566425D45511004C5CAE /* runheads */ = {isa = PBXFileReference; lastKnownFileType = folder; path = runheads; sourceTree = "<group>"; };
 		260B87CD25D1CA4800D295B6 /* HushHeadersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HushHeadersApp.swift; sourceTree = "<group>"; };
 		260B87CF25D1CA4A00D295B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		260B87D425D1CA4A00D295B6 /* HushHeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HushHeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,8 +68,8 @@
 		2600684925D38739003EC0D6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2601566425D45511004C5CAE /* runheads */,
 				2600687F25D38A2A003EC0D6 /* FrameworkNames.json */,
-				2600687A25D389CD003EC0D6 /* runheads */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2600687B25D389D5003EC0D6 /* runheads in Resources */,
 				2600688025D38A2A003EC0D6 /* FrameworkNames.json in Resources */,
 				260B87E425D1CA4B00D295B6 /* Assets.xcassets in Resources */,
+				2601566525D45511004C5CAE /* runheads in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2600687C25D389D5003EC0D6 /* runheads in Resources */,
 				2600688125D38A2A003EC0D6 /* FrameworkNames.json in Resources */,
 				260B87E525D1CA4B00D295B6 /* Assets.xcassets in Resources */,
+				2601566625D45511004C5CAE /* runheads in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
