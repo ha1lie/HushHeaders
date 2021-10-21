@@ -1,4 +1,4 @@
-# HushHeaders
+# ~~HushHeaders~~ DEPRECATED
 A multiplatform utility to aid jailbreak developers with using iOS runtime headers!
 
 ~ Search through private and public frameworks
